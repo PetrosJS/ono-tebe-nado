@@ -181,11 +181,13 @@
 }
 
 .section--cover .section__title .card__book {
-  justify-self: center;
+  display: flex;
+  justify-content: center;
 }
 
 .section--cover .section__title .card__art {
-  justify-self: end;
+  display: flex;
+  justify-content: end;
 }
 
 .section--cover .section__title .item .letter {
