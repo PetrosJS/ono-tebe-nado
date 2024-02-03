@@ -51,29 +51,33 @@
   color: #000;
 }
 
-.nav--header .nav__list {
+.nav--header {
   display: flex;
   align-items: center;
   gap: 32px;
   padding-left: 20px;
 }
 
-.nav--header .nav__list a {
+.nav__list {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  padding-left: 20px;
+}
+
+.text__link {
   display: block;
   white-space: nowrap;
 }
 
-.nav--header .nav__list li {
+.main_link_block {
   position: relative;
   display: block;
   white-space: nowrap;
-}
-
-.nav--header .nav__list .main_link_block {
   border-bottom: 1px solid #000;
 }
 
-.nav--header .nav__list li::before {
+.header__li::before {
   content: "";
   position: absolute;
   top: 50%;
@@ -84,7 +88,7 @@
   border-radius: 50%;
   border: 1px solid #000;
 }
-.nav--header .nav__list .main_link::before {
+.main_link__header::before {
   display: none;
   content: "";
   position: absolute;
@@ -128,17 +132,17 @@
   background-color: #000;
 } */
 
-.nav--footer .nav__list {
+.nav__list__footer {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.nav--footer .nav__list li {
+.main_link_block__footer {
   border-bottom: 1px solid #000;
 }
 
-.nav--footer .nav__list .main_link {
+.main_link__footer {
   border-bottom: 1px solid transparent;
 }
 
@@ -160,7 +164,7 @@
   padding: 165px 50px 50px;
 }
 
-.section--cover .section__title {
+.cover__title {
   display: grid;
   gap: 20px;
   margin-bottom: 147px;
@@ -171,30 +175,26 @@
   color: #fff;
 }
 
-.section--cover .section__title .item {
+.item__cover {
   line-height: 115%;
   letter-spacing: 0.3em;
 }
 
-.section--cover .section__title .card__film {
-  justify-self: start;
-}
-
-.section--cover .section__title .card__book {
+.second__item {
   display: flex;
   justify-content: center;
 }
 
-.section--cover .section__title .card__art {
+.third__item {
   display: flex;
   justify-content: end;
 }
 
-.section--cover .section__title .item .letter {
+.letter {
   letter-spacing: 0.6em;
 }
 
-.section--cover .section__bottom {
+.cover__bottom {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
@@ -203,7 +203,7 @@
   padding-left: 28px;
 }
 
-.section--cover .section__bottom p {
+.cover__bottom__text {
   font-size: 22px;
   line-height: 28px;
   text-transform: uppercase;
@@ -256,7 +256,7 @@
   background-color: #000;
 }
 
-.section--about .section__logo-wrapper img {
+.section--about__logo {
   width: 148px;
   height: 114px;
 }

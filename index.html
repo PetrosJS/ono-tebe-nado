@@ -15,14 +15,14 @@
     <header class="header">
       <nav class="nav nav--header">
         <ul class="nav__list">
-          <li class="main_link">
-            <a href="#">главная</a>
+          <li class="main_link main_link__header header__li">
+            <a class="text__link" href="#">главная</a>
           </li>
-          <li class="main_link_block">
-            <a href="#"> посмотреть лоты</a>
+          <li class="main_link_block header__li">
+            <a class="text__link" href="#"> посмотреть лоты</a>
           </li>
-          <li class="main_link_block">
-            <a href="#"> об аукционе</a>
+          <li class="main_link_block header__li">
+            <a class="text__link" href="#"> об аукционе</a>
           </li>
         </ul>
       </nav>
@@ -42,13 +42,21 @@
       <!-- Начало cover-a -->
       <section class="section section--cover">
         <div class="overlay">
-          <h1 class="section__title">
-            <span class="item"> о<span class="letter">но</span> </span>
-            <span class="item card__book"> те<span class="letter">бе</span> </span>
-            <span class="item card__art"> н <span class="letter">ад</span>о </span>
+          <h1 class="section__title cover__title">
+            <span class="item item__cover">
+              о<span class="letter">но</span>
+            </span>
+            <span class="item item__cover second__item">
+              те<span class="letter">бе</span>
+            </span>
+            <span class="item item__cover third__item">
+              н <span class="letter">ад</span>о
+            </span>
           </h1>
-          <div class="section__bottom">
-            <p>Аукцион вещей, в которые никто не верил</p>
+          <div class="section__bottom cover__bottom">
+            <p class="cover__bottom__text">
+              Аукцион вещей, в которые никто не верил
+            </p>
 
             <button type="button" class="btn">Сделать ставку</button>
           </div>
@@ -121,7 +129,7 @@
           <img
             src="img/logo/logo-white.svg"
             alt="логотип"
-            class="section__logo"
+            class="section__logo section--about__logo"
           />
         </div>
 
@@ -157,14 +165,14 @@
       </address>
 
       <nav class="nav nav--footer">
-        <ul class="nav__list">
-          <li class="main_link">
+        <ul class="nav__list nav__list__footer">
+          <li class="main_link main__link__footer">
             <a href="#">главная</a>
           </li>
-          <li>
+          <li class="main_link_block__footer">
             <a href="#"> посмотреть лоты</a>
           </li>
-          <li>
+          <li class="main_link_block__footer">
             <a href="#"> об аукционе</a>
           </li>
         </ul>
