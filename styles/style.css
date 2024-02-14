@@ -31,11 +31,13 @@
 }
 
 .nav--header {
-  transform: translate(7px, 1px);
+  position: relative;
+  left: 7px;
+  top: 2px;
 }
 
 .nav .nav_last {
-  transform: translateX(3px);
+  margin-left: 3px;
 }
 
 .logo {
@@ -49,12 +51,12 @@
 }
 
 .address--header {
-  transform: translate(-27px, 0);
+  position: relative;
+  left: -27px;
 }
 
 .address {
   flex: 1;
-  /* margin-right: 27px; */
 }
 
 .footer {
@@ -84,7 +86,7 @@
   white-space: nowrap;
 }
 
-.nav--header .nav__list .main_link_block {
+.main_link_block_header {
   border-bottom: 1px solid #000;
 }
 
@@ -99,6 +101,7 @@
   border-radius: 50%;
   border: 1px solid #000;
 }
+
 .main_link__header::before {
   display: none;
   content: "";
@@ -116,7 +119,9 @@
   flex-direction: column;
   align-items: center;
 }
-
+.main_link {
+  font-size: 18px;
+}
 .main_link_block__footer {
   border-bottom: 1px solid #000;
   font-size: 18px;
@@ -136,7 +141,7 @@
 
 .section--cover {
   margin-bottom: 179px;
-  background-image: url("../img/section/showcase/bg.jpg");
+  background-image: url("../img/section/showcase/lotus-flower.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -167,22 +172,20 @@
 .second__item {
   display: flex;
   justify-content: center;
-  transform: translateY(-7px);
+  position: relative;
+  top: -7px;
 }
 
 .third__item {
   display: flex;
-  transform: translate(60px, -24px);
   justify-content: end;
+  position: relative;
+  top: -24px;
+  left: 32px;
 }
 
-.a_block {
-  position: relative;
-  left: 30px;
-}
-.o_block {
-  position: relative;
-  left: -30px;
+.third__item .third_left {
+  margin-left: 31px;
 }
 
 .letter {
@@ -198,7 +201,7 @@
   padding-left: 28px;
 }
 
-cover__bottom__text {
+.cover__bottom__text {
   font-size: 22px;
   line-height: 28px;
   text-transform: uppercase;
@@ -218,15 +221,12 @@ cover__bottom__text {
   margin: 0 auto 24px auto;
   display: flex;
   gap: 25px;
+  flex-wrap: wrap;
 }
 
-/*.card__film {
-  border-radius: 0 27px 0 0;
-  overflow: hidden;
-} */
-
 .lot_image {
-  width: 100%;
+  width: 334px;
+  height: 563px;
 }
 
 .section--lots .section__link {
@@ -236,6 +236,7 @@ cover__bottom__text {
   margin-left: 65px;
   font-size: 20px;
   color: #000;
+  padding-top: 7px;
 }
 
 .section--about {
@@ -244,11 +245,6 @@ cover__bottom__text {
   display: flex;
   gap: 72px;
   margin-bottom: 180px;
-}
-
-.section--about .overlay {
-  display: flex;
-  gap: 72px;
 }
 
 .section--about .section__logo-wrapper {
@@ -301,23 +297,18 @@ cover__bottom__text {
   width: fit-content;
 }
 
-/* .address--footer a,
-.address--footer p {
-text-align: center;
-  margin: 0 auto; 
-}*/
-
 .card {
   min-height: 563px;
   position: relative;
 }
 
+.card-link {
+  width: calc(100% / 3 - 17px);
+}
+
 .card .card_content {
-  position: absolute;
-  left: 40px;
-  top: 50px;
-  right: 40px;
-  bottom: 50px;
+  height: 527px;
+  padding: 50px 40px 10px 40px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -325,6 +316,10 @@ text-align: center;
 
 .card img {
   width: 100%;
+  position: absolute;
+  top: 0;
+  z-index: -1;
+  left: 0;
 }
 
 .card .card__title {
@@ -336,9 +331,9 @@ text-align: center;
 }
 
 .card .card__text {
-  transform: translateY(-4px);
   font-size: 20px;
   line-height: 120%;
+  margin-top: auto;
 }
 
 .socials {
