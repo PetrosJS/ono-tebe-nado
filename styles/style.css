@@ -13,6 +13,7 @@
   background: none;
   cursor: pointer;
   text-transform: uppercase;
+  z-index: 1;
 }
 
 .header {
@@ -26,6 +27,19 @@
   color: #000;
 }
 
+.section {
+  position: relative;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  opacity: 0.6;
+}
 .nav {
   flex: 1;
 }
@@ -40,19 +54,22 @@
   margin-left: 3px;
 }
 
+.nav_last {
+  border-bottom: 1px solid #000;
+}
+
 .logo {
   flex: 1;
 }
 
 .logo img {
-  width: 164px;
-  height: 104px;
+  width: 148px;
+  height: 105px;
   margin-left: 40px;
 }
 
 .address--header {
-  position: relative;
-  left: -27px;
+  margin-right: 27px;
 }
 
 .address {
@@ -127,8 +144,8 @@
   font-size: 18px;
 }
 
-.main_link__footer {
-  border-bottom: 1px solid transparent;
+.main__link__footer {
+  border-bottom: none;
 }
 
 .section__title {
@@ -137,6 +154,7 @@
   font-weight: 700;
   color: #000;
   text-transform: uppercase;
+  z-index: 1;
 }
 
 .section--cover {
@@ -166,22 +184,20 @@
 }
 
 .first__item {
+  z-index: 1;
   justify-self: start;
 }
 
 .second__item {
   display: flex;
   justify-content: center;
-  position: relative;
-  top: -7px;
+  z-index: 1;
 }
 
 .third__item {
   display: flex;
   justify-content: end;
-  position: relative;
-  top: -24px;
-  left: 32px;
+  z-index: 1;
 }
 
 .third__item .third_left {
@@ -206,6 +222,7 @@
   line-height: 28px;
   text-transform: uppercase;
   word-spacing: 19px;
+  z-index: 1;
 }
 
 .section--lots {
@@ -306,9 +323,12 @@
   width: calc(100% / 3 - 17px);
 }
 
-.card .card_content {
-  height: 527px;
-  padding: 50px 40px 10px 40px;
+.card_content {
+  z-index: 2;
+}
+
+.card {
+  padding: 50px 40px 48px 40px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -328,12 +348,14 @@
   line-height: 120%;
   text-transform: uppercase;
   text-decoration: underline;
+  z-index: 2;
 }
 
 .card .card__text {
   font-size: 20px;
   line-height: 120%;
   margin-top: auto;
+  z-index: 2;
 }
 
 .socials {
@@ -345,8 +367,4 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 48px;
-  height: 48px;
-  border: 1px solid #000;
-  border-radius: 50%;
 }
