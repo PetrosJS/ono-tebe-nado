@@ -153,7 +153,7 @@
   background-position: center;
   background-size: cover;
   width: 1100px;
-  height: 757px;
+  min-height: 757px;
 
   padding-top: 165px;
   padding-bottom: 0px;
@@ -251,7 +251,8 @@
 
 .lot_image {
   width: 334px;
-  height: 563px;
+  height: 100%;
+  object-fit: contain;
 }
 
 .section--lots .section__link {
